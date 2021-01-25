@@ -1,0 +1,41 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String args[]){
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int k=sc.nextInt();
+    int[] bill=new int[n];
+     for(int i=0;i<n;i++){
+        bill[i]=sc.nextInt();
+    }
+    //System.out.println(Arrays.toString(bill));
+    int charged=sc.nextInt();
+    int sum=0;
+    int pay=0;
+   
+     for(int j=0;j<n;j++){
+        sum+=bill[j];
+        
+    }
+    pay=sum-bill[k];
+    int billpay=pay/2;
+    
+    //System.out.println(sum);
+    //System.out.println(pay);
+    //System.out.println(billpay);
+    if(charged>billpay){
+        int bover=charged-billpay;
+        System.out.println(bover);
+    }
+    else{
+        System.out.println("Bon Appetit");
+    }
+}
+}
